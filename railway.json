@@ -1,0 +1,20 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "version": 2,
+  "services": {
+    "backend": {
+      "source": {
+        "repo": "your-username/your-repo-name",
+        "rootDirectory": "/server"
+      },
+      "variables": {
+        "NODE_ENV": "production",
+        "PORT": "${{ PORT }}"
+      },
+      "healthcheckPath": "/",
+      "healthcheckTimeout": 300,
+      "restartPolicyType": "on_failure",
+      "restartPolicyMaxRetries": 10
+    }
+  }
+}
